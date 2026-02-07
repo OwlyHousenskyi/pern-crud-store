@@ -4,6 +4,10 @@ import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
 
+import { errorHandler } from "./middleware/errorHandler.js";
+import rateLimiter from "./middleware/rateLimiter.js";
+import { blockBots } from "./middleware/botProtection.js";
+
 import productRoutes from "./routes/productRoutes.js";
 import { sql } from "./config/db.js";
 
@@ -16,8 +20,10 @@ app.use(express.json());
 app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
-
+app.use(rateLimiter);
+app.use(blockBots);
 app.use("/api/products", productRoutes);
+app.use(errorHandler);
 
 async function initDB() {
     try {
