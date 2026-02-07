@@ -9,3 +9,6 @@ Configured the PostgreSQL database connection using environment variables, added
 
 VERSION 4:
 Developed full CRUD controllers for managing the products resource, enabling creation, retrieval, updating, and deletion of records with proper error handling and HTTP status responses.
+
+VERSION 5: 
+Implemented a comprehensive middleware layer to enhance security, stability, and maintainability of the API, including request rate limiting, bot traffic detection, secure CORS configuration, centralized error handling, and request logging, ensuring production-ready backend behavior.
