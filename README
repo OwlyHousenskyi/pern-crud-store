@@ -12,3 +12,9 @@ Developed full CRUD controllers for managing the products resource, enabling cre
 
 VERSION 5: 
 Implemented a comprehensive middleware layer to enhance security, stability, and maintainability of the API, including request rate limiting, bot traffic detection, secure CORS configuration, centralized error handling, and request logging, ensuring production-ready backend behavior.
+
+VERSION 6:
+Initialized the front-end application using Vite and React, configured the project structure, and integrated Tailwind CSS along with DaisyUI for utility-first styling and theme support, establishing a scalable and modern UI foundation.
+
+VERSION 7:
+Implemented the core layout components, including a responsive Navbar and a dynamic Theme Selector using Zustand for global state management. Enabled persistent theme switching with localStorage integration and DaisyUI theme configuration, allowing real-time UI customization across the application.
