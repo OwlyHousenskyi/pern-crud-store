@@ -10,7 +10,7 @@ export default function App() {
   console.log(theme)
 
   return (
-    <div className="min-h-screen bg-base-200 transition-colors duration-300">
+    <div className="bg-base-200 text-base-content min-h-screen transition-colors duration-300">
       <Navbar />
 
       <Routes>
