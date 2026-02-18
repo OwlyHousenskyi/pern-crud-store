@@ -2,43 +2,51 @@ import { PaletteIcon } from "lucide-react";
 import { THEMES } from "../constants";
 import { useThemeStore } from "../store/useThemeStore";
 
-function ThemeSelector() {
+export default function ThemeSelector() {
   const { theme, setTheme } = useThemeStore();
 
   return (
     <div className="dropdown dropdown-end">
-      {/* DROPDOWN TRIGGER */}
-
-      <button tabIndex={0} className="btn btn-ghost btn-circle">
-        <PaletteIcon className="size-5" />
+      <button className="btn btn-ghost btn-circle">
+        <PaletteIcon className="size-5 text-base-content" />
       </button>
 
       <div
-        tabIndex={0}
-        className="dropdown-content mt-2 p-1 shadow-2xl bg-base-200 backdrop-blur-lg rounded-2xl
-        w-56 border border-base-content/10
-        "
+        className="
+        dropdown-content mt-2 p-1 w-56
+        bg-base-100 text-base-content
+        border border-base-content/10
+        rounded-2xl shadow-2xl backdrop-blur-lg
+      "
       >
-        {THEMES.map((themeOption) => (
+        {THEMES.map((t) => (
           <button
-            key={themeOption.name}
+            key={t.name}
+            onClick={() => setTheme(t.name)}
             className={`
-                w-full px-4 py-3 rounded-xl flex items-center gap-3 transition-colors
-                ${
-                  theme === themeOption.name
-                    ? "bg-primary/10 text-primary"
-                    : "hover:bg-base-content/5"
-                }
-              `}
-            onClick={() => setTheme(themeOption.name)}
+              w-full px-4 py-3 rounded-xl flex items-center gap-3
+              transition-colors
+              ${theme === t.name
+                ? "bg-primary/10 text-primary"
+                : "hover:bg-base-200"}
+            `}
           >
+            {/* Icon */}
             <PaletteIcon className="size-4" />
-            <span className="text-sm font-medium">{themeOption.label}</span>
 
-            {/* THEME PREVIEW COLORS */}
+            {/* Label */}
+            <span className="text-sm font-medium">
+              {t.label}
+            </span>
+
+            {/* Color preview dots */}
             <div className="ml-auto flex gap-1">
-              {themeOption.colors.map((color, i) => (
-                <span key={i} className="size-2 rounded-full" style={{ backgroundColor: color }} />
+              {t.colors.map((color, i) => (
+                <span
+                  key={i}
+                  className="size-2.5 rounded-full border border-base-content/20"
+                  style={{ backgroundColor: color }}
+                />
               ))}
             </div>
           </button>
@@ -47,4 +55,3 @@ function ThemeSelector() {
     </div>
   );
 }
-export default ThemeSelector;

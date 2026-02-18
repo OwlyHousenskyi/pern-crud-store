@@ -1,9 +1,14 @@
 import { create } from "zustand";
 
+const savedTheme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", savedTheme);
+
 export const useThemeStore = create((set) => ({
-  theme: localStorage.getItem("preferred-theme") || "forest",
+  theme: savedTheme,
+
   setTheme: (theme) => {
-    localStorage.setItem("preferred-theme", theme);
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
     set({ theme });
   },
 }));
