@@ -18,3 +18,9 @@ Initialized the front-end application using Vite and React, configured the proje
 
 VERSION 7:
 Implemented the core layout components, including a responsive Navbar and a dynamic Theme Selector using Zustand for global state management. Enabled persistent theme switching with localStorage integration and DaisyUI theme configuration, allowing real-time UI customization across the application.
+
+VERSION 8:
+Implemented global product state management using Zustand and connected the React frontend to the Express API. Enabled fetching and displaying products in a responsive grid layout, created reusable ProductCard components, and integrated loading states and error handling. Established full client–server communication for retrieving product data in real time.
+
+VERSION 9:
+Developed complete product interaction features including Add Product modal, product editing page, and delete functionality. Integrated form state management, toast notifications, and automatic UI updates after CRUD operations. Refined UI styling with DaisyUI theming support, improved modal accessibility and spacing, and ensured consistent design across light and dark themes.

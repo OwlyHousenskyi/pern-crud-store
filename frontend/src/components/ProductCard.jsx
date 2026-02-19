@@ -23,14 +23,14 @@ function ProductCard({ product }) {
         {/* CARD ACTIONS */}
         <div className="card-actions justify-end mt-4">
           <Link to={`/product/${product.id}`} className="btn btn-sm btn-info btn-outline">
-            <EditIcon className="size-4" />
+            <EditIcon className="size-5" />
           </Link>
 
           <button
-            className="btn btn-sm btn-error  btn-outline"
+            className="btn btn-sm btn-outline text-base-content hover:bg-error/10 hover:text-error transition-colors"
             onClick={() => deleteProduct(product.id)}
           >
-            <Trash2Icon className="size-4" />
+            <Trash2Icon className="size-5" />
           </button>
         </div>
       </div>
