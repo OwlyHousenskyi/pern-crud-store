@@ -47,7 +47,7 @@ function AddProductModal() {
                 <input
                   type="text"
                   placeholder="Enter product name"
-                  className="input input-bordered w-full pl-10 py-3 bg-base-200 text-base-content placeholder:text-base-content/50 focus:input-primary"
+                  className="input input-bordered w-full pl-3 py-3 bg-base-200 text-base-content placeholder:text-base-content/50 focus:input-primary"
                   value={formData.name}
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
@@ -72,7 +72,7 @@ function AddProductModal() {
                   min="0"
                   step="0.01"
                   placeholder="0.00"
-                  className="input input-bordered w-full pl-10 py-3 bg-base-200 text-base-content placeholder:text-base-content/50 focus:input-primary"
+                  className="input input-bordered w-full pl-3 py-3 bg-base-200 text-base-content placeholder:text-base-content/50 focus:input-primary"
                   value={formData.price}
                   onChange={(e) =>
                     setFormData({ ...formData, price: e.target.value })
@@ -97,7 +97,7 @@ function AddProductModal() {
                 <input
                   type="text"
                   placeholder="https://example.com/image.jpg"
-                  className="input input-bordered w-full pl-10 py-3 bg-base-200 text-base-content placeholder:text-base-content/50 focus:input-primary"
+                  className="input input-bordered w-full pl-3 py-3 bg-base-200 text-base-content placeholder:text-base-content/50 focus:input-primary"
                   value={formData.image}
                   onChange={(e) =>
                     setFormData({ ...formData, image: e.target.value })
